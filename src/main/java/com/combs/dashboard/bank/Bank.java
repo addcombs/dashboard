@@ -6,23 +6,23 @@ import org.springframework.data.cassandra.core.mapping.Table;
 @Table
 public class Bank {
 
-    @PrimaryKey private String memberid;
+    @PrimaryKey private String userId;
     private Float balance;
 
     public Bank() {
     }
 
-    public Bank(String memberid, Float balance) {
-        this.memberid = memberid;
+    public Bank(String userId, Float balance) {
+        this.userId = userId;
         this.balance = balance;
     }
 
-    public String getMemberid() {
-        return memberid;
+    public String getUserId() {
+        return userId;
     }
 
-    public void setMemberid(String memberid) {
-        this.memberid = memberid;
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     public Float getBalance() {

@@ -9,18 +9,18 @@ import org.springframework.data.cassandra.core.mapping.Table;
 public class User {
     
     @PrimaryKey private String userId;
-    private String fName;
-    private String lName;
+    private String firstName;
+    private String lastName;
     private String imageUrl;
     private LocalDate birthdate;
 
     public User() {
     }
 
-    public User(String userId, String fName, String lName, String imageUrl, LocalDate birthdate) {
+    public User(String userId, String firstName, String lastName, String imageUrl, LocalDate birthdate) {
         this.userId = userId;
-        this.fName = fName;
-        this.lName = lName;
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.imageUrl = imageUrl;
         this.birthdate = birthdate;
     }
@@ -33,20 +33,20 @@ public class User {
         this.userId = userId;
     }
 
-    public String getfName() {
-        return fName;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setfName(String fName) {
-        this.fName = fName;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public String getlName() {
-        return lName;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setlName(String lName) {
-        this.lName = lName;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getImageUrl() {

@@ -6,6 +6,6 @@ import java.util.Optional;
 
 public interface BankRepository extends CassandraRepository<Bank, String> {
 
-    Optional<Bank> findBankByMemberid(String memberid);
+    Optional<Bank> findBankByUserId(String userId);
 
 }

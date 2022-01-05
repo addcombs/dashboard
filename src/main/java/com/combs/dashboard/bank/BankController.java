@@ -12,9 +12,9 @@ public class BankController {
     @Autowired
     BankService bankService;
 
-    @GetMapping("/bank/{memberid}")
-    public ResponseEntity<Bank> bankAccount(@PathVariable String memberid){
-        return bankService.getBankAccount(memberid);
+    @GetMapping("/bank/{userId}")
+    public ResponseEntity<Bank> bankAccount(@PathVariable String userId){
+        return bankService.getBankAccount(userId);
     }
 
 }

@@ -48,8 +48,8 @@ public class UserService {
         if(userCurrent.isPresent()){
             try {
                 User userNew = userCurrent.get();
-                userNew.setfName(user.getfName());
-                userNew.setlName(user.getlName());
+                userNew.setFirstName(user.getFirstName());
+                userNew.setLastName(user.getLastName());
                 userNew.setBirthdate(user.getBirthdate());
                 userNew.setImageUrl(user.getImageUrl());
                 return new ResponseEntity<>(userRepository.save(userNew), HttpStatus.OK);

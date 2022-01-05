@@ -12,8 +12,8 @@ import java.security.NoSuchAlgorithmException;
 
 @Configuration
 public class CassandraConfig {
-    private final String username = "addcombs-at-712969401364";
-    private final String password = "Kz3EK3atMPt6/EUM2Rf+V1pVWbHZy85e/KaFDWY/TYQ=";
+    // private final String username = "addcombs-at-712969401364";
+    // private final String password = "Kz3EK3atMPt6/EUM2Rf+V1pVWbHZy85e/KaFDWY/TYQ=";
     File driverConfig = new File(System.getProperty("user.dir")+"/application.conf");
 
     @Primary
@@ -21,9 +21,9 @@ public class CassandraConfig {
     CqlSession session() throws NoSuchAlgorithmException {
         return CqlSession.builder().
                 withConfigLoader(DriverConfigLoader.fromFile(driverConfig)).
-                withAuthCredentials(username, password).
-                withSslContext(SSLContext.getDefault()).
-                withKeyspace("combs_fam").
+                // withAuthCredentials(username, password).
+                // withSslContext(SSLContext.getDefault()).
+                withKeyspace("combs").
                 build();
     }
 }
