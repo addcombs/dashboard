@@ -26,17 +26,17 @@ public class UserController {
         return userService.getUsers();
     }
 
-    @PostMapping("/addUser")
+    @PostMapping("/add-user")
     public ResponseEntity<User> addUser(@RequestBody User user) {
         return userService.addUser(user);
     }
 
-    @PutMapping("/updateUser")
+    @PutMapping("/update-user")
     public ResponseEntity<User> updateUser(@RequestBody User user) {
         return userService.updateUser(user);
     }
 
-    @DeleteMapping("/removeUser/{userId}")
+    @DeleteMapping("/remove-user/{userId}")
     public ResponseEntity<HttpStatus> removeUser(@PathVariable("userId") String userId){
         return userService.removeUser(userId);
     }

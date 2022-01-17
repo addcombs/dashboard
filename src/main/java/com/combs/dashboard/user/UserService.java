@@ -49,6 +49,7 @@ public class UserService {
             try {
                 User userNew = userCurrent.get();
                 userNew.setFirstName(user.getFirstName());
+                
                 userNew.setLastName(user.getLastName());
                 userNew.setBirthdate(user.getBirthdate());
                 userNew.setImageUrl(user.getImageUrl());

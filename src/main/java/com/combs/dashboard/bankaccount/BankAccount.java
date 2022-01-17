@@ -1,18 +1,18 @@
-package com.combs.dashboard.bank;
+package com.combs.dashboard.bankaccount;
 
 import org.springframework.data.cassandra.core.mapping.PrimaryKey;
 import org.springframework.data.cassandra.core.mapping.Table;
 
 @Table
-public class Bank {
+public class BankAccount {
 
     @PrimaryKey private String userId;
     private Float balance;
 
-    public Bank() {
+    public BankAccount() {
     }
 
-    public Bank(String userId, Float balance) {
+    public BankAccount(String userId, Float balance) {
         this.userId = userId;
         this.balance = balance;
     }
